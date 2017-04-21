@@ -1,0 +1,78 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Thu Apr 20 10:43:40 2017
+| Host         : Scott-Surface running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a200t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    15 |
+| Unused register locations in slices containing registers |    17 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             911 |          211 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             184 |           49 |
+| Yes          | No                    | No                     |             120 |           28 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|    Clock Signal   |                              Enable Signal                              |                                                                    Set/Reset Signal                                                                   | Slice Load Count | Bel Load Count |
++-------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/need_combiner.use_3to1_fma.skid_buffer_combiner/b_tx    |                                                                                                                                                       |                2 |              6 |
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/need_combiner.use_3to1_fma.skid_buffer_combiner/p_35_in |                                                                                                                                                       |                2 |              6 |
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/need_combiner.use_3to1_fma.skid_buffer_combiner/p_48_in |                                                                                                                                                       |                2 |              6 |
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/need_combiner.use_3to1_fma.skid_buffer_combiner/a_tx    |                                                                                                                                                       |                1 |              6 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[42] |                1 |              8 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/FMA_OP.OP/addsub/add/NORM/LZE/ENCODE[0].MUX_Z/OP_DEL/i_pipe/first_q[1]                                                                |                2 |              8 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/i_nd_to_rdy/opt_has_pipe.first_q_reg[12]                                                                                              |                5 |             13 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ABS_DELAY/i_pipe/first_q[5]                                                                            |                7 |             32 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/FMA_OP.OP/addsub/add/NORM/LZE/ZERO_DET_CC_1/CARRYS_OUT[7]                                                                             |                5 |             32 |
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/i_nd_to_rdy/m_axis_result_tvalid                        |                                                                                                                                                       |                8 |             32 |
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/need_combiner.use_3to1_fma.skid_buffer_combiner/c_tx    |                                                                                                                                                       |                7 |             32 |
+|  sysclk_IBUF_BUFG | fmac/U0/i_synth/need_combiner.use_3to1_fma.skid_buffer_combiner/p_26_in |                                                                                                                                                       |                6 |             32 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/FMA_OP.OP/addsub/add/EXP/conv_exp.downsize_exp/FLOW_REQ.EXP_NE.FLOW_DELAY/i_pipe/SR[0]                                                |               11 |             44 |
+|  sysclk_IBUF_BUFG |                                                                         | fmac/U0/i_synth/FMA_OP.OP/addsub/add/EXP/A_ZERO_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]                                                             |               18 |             47 |
+|  sysclk_IBUF_BUFG |                                                                         |                                                                                                                                                       |              224 |            985 |
++-------------------+-------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 6      |                     4 |
+| 8      |                     2 |
+| 13     |                     1 |
+| 16+    |                     8 |
++--------+-----------------------+
+
+

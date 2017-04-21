@@ -1,0 +1,5 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../fp_test.ip_user_files/ip/floating_point_MAC/sim/floating_point_MAC.vhd"
+
+# Do not sort compile order
+nosort
